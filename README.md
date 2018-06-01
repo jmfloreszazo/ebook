@@ -8,8 +8,6 @@ Antes de nada, gracias por llegar hasta aquí y leer los libros.
 
 Mi intención al crear los libros en un formato abierto para la comunidad en español y publicados capítulo a capítulo.
 
-Los libros se irán liberando capítulo a capítulo, al utilizar este médio, la intención es avanzar en vivo.
-
 Antes de poder ver los libros publicados y el *road map* de aquellos que están en previsión, permiteme que me presente.
 
 # Sobre el autor
