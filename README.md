@@ -14,7 +14,7 @@ Antes de poder ver los libros publicados y el *road map* de aquellos que están 
 
 # Sobre el autor
 
-<img align="left" width="200" height="200" src="/img/mesquarebw.png">
+<img align="left" width="140" height="140" src="/img/mesquarebw.png">
 
 Actualmente trabajo como arquitecto de soluciones en Prodware.
 
