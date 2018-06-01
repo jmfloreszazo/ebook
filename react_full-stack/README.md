@@ -31,7 +31,7 @@ Secciones del libro:
 
 ---
 
-<h1>I. Simplemente React</h1>
+<h1>I. React</h1>
 
 En esta parte del libro vamos a conocer React, sin ningun tipo de artificio, es decir, vamos a conocer React en su estado puro.
 
