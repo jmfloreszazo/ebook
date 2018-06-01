@@ -1,4 +1,4 @@
-[React Full-Stack](/img/react-full-stack.png)
+![React Full-Stack](/img/react-full-stack.png)
 
 Secciones del libro:
 
