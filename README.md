@@ -22,7 +22,7 @@ Uno de los proyectos en los que he trabajado a recibido un premio de la UE: [Lau
 
 A nivel profesional, estoy involucrado en diversos proyectos para clientes nacionales e internacionales.
 
-Y en lo personal, mi proximo es preparar libros y artículos sobre diversas tecnologías.
+Y en lo personal, mi proximo objetivo es preparar libros y artículos sobre diversas tecnologías.
 
 **Libros**
 
@@ -30,4 +30,4 @@ Y en lo personal, mi proximo es preparar libros y artículos sobre diversas tecn
 
 # Nota del autor
 
-* Deliveradamente algunas palabras en algunas posiciones particulares no tienen tilde, como por ejemplo los links, para evitar conflictos en Markdown.
+* Deliveradamente algunas palabras en algunas posiciones particulares no tienen tilde, como por ejemplo los links, para evitar conflictos en markdown.
