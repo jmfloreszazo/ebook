@@ -63,7 +63,7 @@ Finalmente, aprenderá sobre "estado", cómo difiere de los accesorios y cómo o
 
 Veremos cómo usar los controles de formulario y el ciclo de vida del componente.
 
-[![Inicio Seccion](/img/round_arrow_back_ios_black_24dp.png)](#1-introduccion)
+[![Inicio Seccion](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/round_arrow_back_ios_black_24dp.png)](#1-introduccion)
 
 ## 1.1 ¿Por que React y nada más?
 
@@ -212,7 +212,7 @@ La consola de depuración es una gran herramienta y no es buena idea cerrarla cu
 
 Seleccione la solapa indicada y busca en el componente en el árbol, si no lo encuentras, utiliza la búsqueda. Aquí puede [leer más información sobre la herramienta](https://github.com/facebook/react-devtools).
 
-[![Inicio Seccion](/img/1x/round_arrow_back_ios_black_24dp.png)](#1-introduccion)
+[![Inicio Seccion](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/round_arrow_back_ios_black_24dp.png)](#1-introduccion)
 
 # 2. Hello World
 
@@ -280,7 +280,7 @@ Esta tipo de sintaxis similar a HTML son renderizadas por funciones JSX, a conti
 
 [Ejercicio Resuelto](/scr/c2/index.js)
 
-[![Hello World](/img/1x/round_arrow_back_ios_black_24dp.png)](#2-hello-world)
+[![Hello World](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/round_arrow_back_ios_black_24dp.png)](#2-hello-world)
 
 # 3. JSX
 
@@ -407,7 +407,7 @@ Si no lo ha notado, estoy tratando de demostrar que la plantilla y la lógica de
 
 No tienes que creerme ahora mismo. Solo tenga la idea en el fondo de su mente mientras trabaja en los ejemplos y ejercicios. Puede encontrar (como yo lo hice) que la combinación de la lógica y la vista hace que tu código sea más fácil de navegar, más fácil de escribir y más sencillo de depurar. Pasarás menos tiempo saltando entre archivos cuando toda la funcionalidad relacionada esté en un solo lugar.
 
-[![JSX](/img/1x/round_arrow_back_ios_black_24dp.png)](#3-jsx)
+[![JSX](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/round_arrow_back_ios_black_24dp.png)](#3-jsx)
 
 # 4. Trabajando con JSX
 
@@ -742,7 +742,7 @@ function Welcomen() {
 
 [Ejercicio Resuelto](/scr/c4/index_5.js)
 
-[![Trabajando con JSX](/img/1x/round_arrow_back_ios_black_24dp.png)](#4-trabajando-con-jsx)
+[![Trabajando con JSX](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/round_arrow_back_ios_black_24dp.png)](#4-trabajando-con-jsx)
 
 # 5. Componente de ejemplo: Tweet
 
@@ -1106,7 +1106,7 @@ Puedes cambiar al contenido: el nombre, el identificador, el mensaje y incluso e
 
 Ahora vamos a parametrizar componentes.
 
-[![Componente de ejmplo Tweet](/img/1x/round_arrow_back_ios_black_24dp.png)](#5-componente-de-ejemplo-tweet)
+[![Componente de ejmplo Tweet](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/round_arrow_back_ios_black_24dp.png)](#5-componente-de-ejemplo-tweet)
 
 # 6. Props
 
