@@ -1,15 +1,9 @@
-React
-
-PORTADA DEL LIBRO.
+[React Full-Stack](/img/react-full-stack.png)
 
 Secciones del libro:
 
-  * I. Simplemente React.
-  * II. Amigos de React.
-  * III. Backend para React.
-  * IV. Buenac prácticas.
-  * V. Arquitectura.
-
+  * **I. React.**
+  
 ---
 <h1>Índice del libro</h1>
 
