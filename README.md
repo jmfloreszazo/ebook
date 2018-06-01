@@ -1,4 +1,6 @@
-![JMFLORESZAZO.COM](/img/mylogo.png)
+<p align="center">
+  <img src="/img/mylogo.png">
+</p>
 
 ---
 
@@ -12,7 +14,7 @@ Antes de poder ver los libros publicados y el *road map* de aquellos que están 
 
 # Sobre el autor
 
-![Fotografía del autor](/img/mesquarebw.png)
+<img align="left" width="200" height="200" src="/img/mesquarebw.png">
 
 Actualmente trabajo como arquitecto de soluciones en Prodware.
 
