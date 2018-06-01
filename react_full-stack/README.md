@@ -5,7 +5,12 @@ Secciones del libro:
   * **I. React.**
   
 ---
-<h1>Índice del libro</h1>
+
+<h1>I. React</h1>
+
+En esta parte del libro vamos a conocer React, sin ningun tipo de artificio, es decir, vamos a conocer React en su estado puro.
+
+<h1>Índice:</h1>
 
 <!-- TOC -->
 
@@ -31,23 +36,19 @@ Secciones del libro:
 
 ---
 
-<h1>I. React</h1>
-
-En esta parte del libro vamos a conocer React, sin ningun tipo de artificio, es decir, vamos a conocer React en su estado puro.
-
 # 1. Introduccion
 
 Actualmente para de desarrollo frontend existen miles de librerías, cada una hace _algo_, cada una ayuda en _algo_. Una evolucionan para convertirse en estándares de facto, pero sin convertirse en estándares reales y esto es un peligro en la evolución de un proyecto.
 
 React es un escosistema seguro en este aspecto ya que en React ya existen muchos proyectos estandarizados que nos ayudan con el desarrollo: Redux, Webpack, Babel, React Router, ...
 
-Estudiar todo en un solo libro es abrumador,por eso he decidido que este libro se centre en React, sin ningun librería más, añadido.
+Estudiar todo en un solo libro es abrumador, por eso he decidido que esta primera parte del libro se centre en React, sin ningun librería más.
 
-Aprender todo a la vez es enormemente abrumador. Entonces en este libro, tomaremos un enfoque diferente. Un enfoque más sensato. Aprenderemos solamente React.
+Aprender todo a la vez es abrumador. En este libro, tomaremos un enfoque diferente. Un enfoque más sensato. Aprenderemos solamente React.
 
-> Vamos a estudiar React de forma aislada. Sin Redux, ni Router, ni Webpack, ni ...
+> Vamos a estudiar React de forma aislada. Sin Redux, ni Router, ni Webpack, ni nada más.
 
-Cuando domines React, tendrás una base sólida, es cuando debes aprender: Redux, Router y el resto.
+Cuando domines React, tendrás una base sólida, y por tanto, es cuando debes aprender Redux, Router y el resto.
 
 Mi intención es mostrar conceptos con un pequeño ejemplo, usar ese concepto en un ejercicio y ir repitiendolos en los siguientes ejemplos. De esta forma en cada avance, volvemos a estudiar los puntos anteriores.
 
@@ -55,13 +56,11 @@ Mi intención es mostrar conceptos con un pequeño ejemplo, usar ese concepto en
 
 La mayoría de los libros de programación comienza con [Hello World](#2-hello-world), este libro no será distinto. Pero a partir de ahí, vamos a realizar componentes, JSX y HTML de React para representar elementos en la página.
 
-Una vez conozcas como crear componentes estáticos, vamos a aprenderá sobre "accesorios" como una forma de pasar los datos que necesitan, y "propTypes" para documentar y depurar los accesorios que requiere un componente.
+Una vez conozcas como crear componentes estáticos, vamos a aprenderá a pasar "props", los datos que necesita un componente para ser dinámico y "propTypes" para documentar/depurar las "props" que requiere un componente.
 
-Cubriremos el accesorio especial "niños" de React, que es una poderosa herramienta para construir componentes compostables y reutilizables.
+El siguiente paso es conocer a las propiedades "children", una herramienta muy necesaria, ya que con ella crearemos componentes reutilizables y apilables.
 
-Finalmente, aprenderá sobre "estado", cómo difiere de los accesorios y cómo organizarlo en una aplicación.
-
-Veremos cómo usar los controles de formulario y el ciclo de vida del componente.
+Los "state", los estados. Y finalmente veremos cómo usar los controles de formulario y el ciclo de vida del componente.
 
 [![Inicio Seccion](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/round_arrow_back_ios_black_24dp.png)](#1-introduccion)
 
@@ -69,13 +68,13 @@ Veremos cómo usar los controles de formulario y el ciclo de vida del componente
 
 Es necesario ir paso a paso a paso. Sin una comprensión sólida de React, el aprendizaje simultáneo de bibliotecas como Redux y herramientas como Webpack, solo sirve para ralentizará el proceso de aprendizaje.
 
-Vamos a considerar a React como el núcleo sobre el que iremos poniendo capas (biblioteca) como Redux o Webpack.
+Vamos a considerar a React como el núcleo sobre el que iremos poniendo capas (bibliotecas) como Redux o Webpack.
 
 ## 1.2 La estructura del libro
 
 **¿Cuánto tiempo me llevará aprender React?**
 
-Los conceptos básicos de React se pueden aprender en cuestión de días. Este libro cubre los conceptos básicos y también contiene ejercicios sobre cada concepto principal para reforzar su comprensión.
+Los conceptos básicos de React se pueden aprender en cuestión de días. Esta primera parte del libro cubre los conceptos básicos y también contiene ejercicios sobre cada concepto principal para reforzar su comprensión.
 
 La mayoría de los ejercicios son cortos, aunque algunos habrá que desarrollados más. El principio que marca su aprendizaje es: combinando la repetición y resolución de problemas.
 
@@ -83,11 +82,11 @@ La mayoría de los ejercicios son cortos, aunque algunos habrá que desarrollado
 
 Muchos desarrolladores pasan a Redux u otras bibliotecas sin tener una firme comprensión de los conceptos de React y cargan el proyecto de bibliotecas que son innecesarias.
 
-Cuando la forma de estudiar no está bien definida y comienzas a construir o bien un prototipo para el trabajo o bien un clon de una aplicación grande, se pierde el foco y comenzamo a añadir liberías. Como no queremos perder el foco, aprender concienzudamente React, vamos a construir cosas pequeñas.
+Cuando la forma de estudiar se basa en construir o bien un prototipo para el trabajo o bien un clon de una aplicación grande, se pierde el foco y comenzamos a añadir liberías. Como no queremos perder el foco, aprender concienzudamente React, vamos a construir cosas pequeñas.
 
 **No construyas un prototipo**
 
-Aprender construyendo un _prototipo_ (para el trabajo) es una mala decisión, como desarrollador con más de 25 años de esperiencia se que un _prototipo_ nunca muere. Vive más alla de la fase de prototipado, se transformará en software productivo y nunca se descartará ni se reescribirá. Tan pronto como algún _jefe_ vea que funciona, comenzará pedirte que incluyas funcionalidades. Y el "algún día vamos a refactorizar" será lo que escuches en cada reunión, pero la realidad será que tendrás un código hinchado, desorganizado y complicadamente reutilizable.
+Aprender construyendo un _prototipo_ (para el trabajo) es una mala decisión, como desarrollador con más de 25 años de experiencia se que un _prototipo_ nunca muere. Vive más alla de la fase de prototipado, se transformará en software productivo y nunca se descartará ni se reescribirá. Tan pronto como algún _jefe_ vea que funciona, comenzará pedirte que incluyas funcionalidades. Y el "algún día vamos a refactorizar" será lo que escuches en cada reunión, pero la realidad será que tendrás un código hinchado, desorganizado y complicadamente reutilizable.
 
 Cuando te des cuenta que el código no será de usar y tirar, te auguro un terrible futuro. Cosas como:
 
@@ -111,11 +110,11 @@ El punto ideal está entre Hello World y clon completo de Twitter.
 
 Por supuesto, empezaremos con Hello World. Ningún libro de programación que se precie estaría completo sin este proyecto.
 
-A medida que crezcan tus habilidades podrás realizar copias de baja fidelidad de aplicaciones simples y sitios como Twitter o Github. Los diseñadores llaman a esto _copywork_", son muy buenos puntos de partida ya que te liberan de decisiones sobre cosas como "dónde debe ir el usuario después de iniciar sesión". Simplemente debes concentrarte en aprender a desarrollarlo con React.
+A medida que crezcan tus habilidades podrás realizar copias de baja fidelidad de aplicaciones simples y sitios como Twitter o Github. Los diseñadores llaman a esto _copywork_, son muy buenos puntos de partida ya que te liberan de decisiones sobre cosas como "dónde debe ir el usuario después de iniciar sesión". Simplemente debes concentrarte en aprender a desarrollarlo con React.
 
-Al final del libro podrás creará clones de esas populares aplicaciones y podrás comenzar un proyecto real. Habrás aprendido a "pensar en componentes" con claridad, esta habilidad la iremos desarrollando a medida que avances en el libro.
+Al final del la primera parte del libro podrás creará clones de esas populares aplicaciones y podrás comenzar un proyecto real. Habrás aprendido a "pensar en componentes" con claridad esta habilidad la iremos desarrollando a medida que avances.,
 
-Desde mi esperiencia la curva de aprendizaje con proyectos pequeños es mayor que los proyectos de gran tamaño o que acumulen muchas funcionalidades.
+Desde mi experiencia la curva de aprendizaje con proyectos pequeños es mayor que los proyectos de gran tamaño o que acumulen muchas funcionalidades.
 
 ## 1.3 Configuración del entorno
 
@@ -129,13 +128,13 @@ Vamos a utilizar la aplicación `create-react-app`. No vamos a clonar un proyect
 * Yarn, dirígite a https://yarnpkg.com/es-ES/ y descarga la última versión.
 * Google Chrome, cualquier navegador moderno debería ser suficiente, aunque este libro lo he desarrollado todo contra Chrome, es el que recomiendo. Si prefieres usar otro navegador, casi con total seguridadr JavaScript funcionará correctamente, pero el CSS podría posiblemente requerirá algunos ajustes.
 * React Developers Tools, dirígete a https://nodejs.org y descarga la última versión
-* Un editor de texto o un IDE de tue elección, recomiendo Visual Studio Code.
+* Un editor de texto o un IDE de tu elección, recomiendo Visual Studio Code.
 
-Si usas Visual Studio Code, esta extensión podrán servirte de gran ayuda: ![Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
+Si usas Visual Studio Code, esta extensión podrán servirte de gran ayuda: ![Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer), de momento ninguna más.
 
 **Yarn**
 
-Yarn es un administrador de paquetes JavaScript relativamente nuevo, fue lanzado en junio de 2016. Comparado con NPM, es más rápido y tiene el beneficio de un archivo de bloqueo, lo que significa que puede instalar de manera confiable los mismos paquetes cada vez que se ejecuta Yarn.
+Yarn es un administrador de paquetes JavaScript. Comparado con NPM, es más rápido y tiene el beneficio de un archivo de bloqueo, lo que significa que puede instalar de manera confiable los mismos paquetes cada vez que se ejecuta Yarn.
 
 Si no estás convencido y desas usar NPM, los comandos son similares:
 
@@ -238,7 +237,7 @@ O por el momento ignoralos.
 
 Abre el archivo `src/index.js`. Elimina todos el contenidos y escribe este código:
 
-> Mi recomendación es que, no copies y pegues, esto en nada ayuda.
+> Mi recomendación es que, no comiences con _copiar & pegar_, esto en nada ayuda.
 
 ```javascript
 import React from 'react';
@@ -252,6 +251,8 @@ ReactDOM.render(<HelloWorld/>,
   document.querySelector('#root'));
 ```
 
+Las dos primeras lineas las verás en cada fichero de React.
+
 **Paso 3**
 
 Entra dentro de la carpeta `react-hello-world`, y ejecuta:
@@ -262,7 +263,7 @@ Automáticamente se abrirá el navegador mostrando "Hello World!"
 
 **¿Qué hace este código?**
 
-Desde la parte inferior, vemos una llamada a `ReactDOM.render`. Esta la parte que hace el trabajo. Este trozo de código es JavaSCript estandar; en cambil la parte de `<HelloWorld/>` tiene el aspecto de HTML. Si comentas esta parte, no se mostrará el componente y desaparecerá "Hello World!".
+Desde la parte inferior, vemos una llamada a `ReactDOM.render`. Esta la parte que hace el trabajo. Este trozo de código es JavaSCript estandar; el cambio es la parte de `<HelloWorld/>` tiene el aspecto de HTML. Si comentas esta parte, no se mostrará el componente y desaparecerá "Hello World!".
 
 React usa el concepto de DOM Virtual. Crea una representación jerarquica de los componentes y los renderiza creando elementos real del DOM e insertandolo donde pidas. En este caso hemos pedido que piten en el `root`.
 
@@ -272,7 +273,7 @@ React usa el concepto de DOM Virtual. Crea una representación jerarquica de los
 ReactDOM.render([React Element], [DOM element]);
 ```
 
-Y en la parte superior tenemos un componente llamado `HelloWorl`. La forma de crear componentes es crenado una función habitualmente llamada "Stateless Function Components".
+Y en la parte superior tenemos un componente llamado `HelloWorld`. La forma de crear componentes es crenado una función habitualmente llamada "Stateless Function Components".
 
 Existen otras 2 formas de crear componentes: clases ES6 y la ya obsoleta `React.createClass`, esta forma de creación las podrás encontrar en Stack Overflow y proyectos de GitHub lo seguiras encontrando, al menos, que te suene.
 
@@ -294,11 +295,11 @@ JSX es una sintaxis inventada para React, muy similar a (X)HTML. Permite crear e
 
 Mezclar HTML y JS es algo que contradice todos los años de buenas prácticas, ¿verdad? desde los dias en que usabamos jQuery, hemos sabido que trabajar directamente sobre elmentos `innerHTML` era peligros y funcionaba mal, por no mencionar que estaba lleno de agujeros de seguridad, así que ¿por qué React vuelve a cometer esos mismos errores?
 
-¿Has observado que no hay comillas alrededor del "HTML"? Eso es porque no es una cadena. En realidad React no analiza está cadena y no la convierte aHTML.
+¿Has observado que no hay comillas alrededor del "HTML"? Eso es porque no es una cadena. En realidad React no analiza está cadena y no la convierte a HTML.
 
 Es cierto, parece HTML. Sin embargo, en realidad es JSX una cómoda forma de llamar a funciones que crean elementos del DOM.
 
-Entonces, ¿qué está haciendo React?, ¿cómo funciona? y  ¿por qué no es tan malo?
+Entonces, ¿qué está haciendo React?, ¿cómo funciona? y ¿por qué no es tan malo?
 
 **JSX está compilado en JavaScript**
 
@@ -374,38 +375,37 @@ La primera decisión que vas a tomar, seguramente es no me gusta el aspecto de H
 
 Escribir las llamadas a `React.createElement` no es un enfoque habitual en la comunidad de React. Casi todos los desarrolladores de React usan JSX, lo que significa que el código que se ve GitHub, Stack Overflow, etc. probablemente se escriba con él.
 
-**Separación**
+**Separación de conceptos**
 
 Esta es la preocupación número uno que tienen la mayoría de los recién llegados: la sensación de que la mezcla de JS con HTML es simplemente incorrecta. Incluso podría hacerte *enfadar*.
 
-En contra de lo que propongo en este libro, yo comencé en un proyecto grande, sin haber tocado React, por eso, mi incapié en como debes aprender React. 
+En contra de lo que propongo, yo comencé en un proyecto grande, sin haber tocado React, por eso, mi incapié en como debes aprender React.
 
-Me tocó estudiar de forma muy rápida y procurando sacar algo adelante, no fuera que mi *jefe* me tomara por un patoso. Y creeme, cuando te encuentras con esta mezcla de JS y HTML, me recordó ligeramente al código spaghetti de la primera versión de ASP o tiene un flashbacks de PHP donde las llamadas a la base de datos se mezclan con el código de vista, no quieres volver a ese mundo. Pero el patrón de construcción de componentes de React ayuda a prevenir esto.
+Me tocó estudiar de forma muy rápida y procurando sacar algo adelante, no fuera que mi *jefe* me tomara por un patoso. Y creeme, cuando te encuentras con esta mezcla de JS y HTML, me recordó ligeramente al código spaghetti de la primera versión de ASP e incluso me apareció un flashbacks de PHP donde las llamadas a la base de datos se mezclanban con el código de vista y la verdad es que no quería volver a ese mundo. Pero el patrón de construcción de componentes de React ayuda a prevenir esto.
 
-Cuando comienzo a entender bien React, escribiendo algunas aplicaciones pequeñas, fue cuando entendí esta mezcla. No obstante, no te preocupes, los ejercicios de este libro le darán toda la práctica que necesita para comprenderlo. Y no, como ya he dicho, nada de proyectos grandes ni prototipos para producción.
+Cuando comienzo a entender bien React es escribiendo algunas aplicaciones pequeñas, fue cuando entendí esta supuesta _mezcla_. No obstante, no te preocupes, los ejercicios de este libro le darán toda la práctica que necesita para comprenderlo. Y no, como ya he dicho, nada de proyectos grandes ni prototipos para producción.
 
-**Unión**
+**Unión de conceptos**
 
 Cuando vuelves la vista atrás y lo piensas detenidamente, existen unas razones de peso para combinar lógica y vista.
 
 Si alguna vez usaste Angular, probablemente hayas escrito en la logica en archivo y la plantilla HTML por separado. ¿Cuántas veces has abierto la plantilla para modificar algo y no te has acordado de entrar en el código de la lógica asociada? o vice versa.
 
-Casi siempre el cambio en lógica va asociado a un cambio en vista o vice versa y al final tengo que cambiar los 2 archivos.
+Casi siempre el cambio en lógica va asociado a un cambio en vista o vice versa y al final tienes que cambiar los 2 archivos.
 
 Si todo estubiera completamente separado, no habría problema, pero no es así. Todo está conectado.
 
 Si pensamos en la forma antigua de desarrollo, tenderemos a separar el HTML del JS por la reusabilidad.
 
-Cuando programamos para front-end, es lógico tener librerías de cosas muy comunes para la reusabilidad, es verdad, aquí debes crearte tus bibliotecas. Pero raramente esta reusabilidad se da en el diseño de pantallas o formularios, están estrechamente relacionados.
-estrechamente unidos, y naturalmente, son dos caras de la misma moneda.
+Cuando programamos para front-end, es lógico tener librerías de cosas muy comunes para la reusabilidad, es verdad, aquí debes crearte tus bibliotecas. Pero raramente esta reusabilidad se da en el diseño de pantallas o formularios, estos están estrechamente relacionados.
 
 Dividir el código en archivos separados no conduce automáticamente a la separación de conceptos.
 
 Si has trabajado con jQuery antiguo. El HTML ignora que JavaScript incluso existe, y sin embargo, el JS y el HTML están estrechamente unidos por el hecho de que los selectores de jQuery deben saber algo sobre la estructura de la página. Si la estructura cambia, el código debe cambiar.
 
-Si no lo ha notado, estoy tratando de demostrar que la plantilla y la lógica de la vista podrían coexistir en el mismo archivo, que podría tener más sentido hacerlo de esa manera.
+Si no lo has notado, estoy tratando de demostrar que la plantilla y la lógica de la vista podrían coexistir en el mismo archivo, que podría tener más sentido hacerlo de esa manera.
 
-No tienes que creerme ahora mismo. Solo tenga la idea en el fondo de su mente mientras trabaja en los ejemplos y ejercicios. Puede encontrar (como yo lo hice) que la combinación de la lógica y la vista hace que tu código sea más fácil de navegar, más fácil de escribir y más sencillo de depurar. Pasarás menos tiempo saltando entre archivos cuando toda la funcionalidad relacionada esté en un solo lugar.
+No tienes que creerme ahora mismo. Solo manten la idea en el fondo de tu cabeza mientras trabaja en los ejemplos y ejercicios. Puede encontrar (como yo lo hice) que la combinación de la lógica y la vista sea tu código sea más fácil de navegar, más fácil de escribir y más sencillo de depurar. Pasarás menos tiempo saltando entre archivos cuando toda la funcionalidad relacionada esté en un solo lugar.
 
 [![JSX](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/round_arrow_back_ios_black_24dp.png)](#3-jsx)
 
@@ -482,7 +482,7 @@ Elimina los parentesis y observa:
 
 `HelloWorld(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.`
 
-Es porque JavaScript necesita un `;` después de ese retorno (debido a la nueva línea), convirtiéndolo efectivamente en esto, que devuelve indefinido.
+Es porque JavaScript necesita un `;` después de ese retorno (debido a la nueva línea), convirtiéndolo efectivamente en esto, devuelve indefinido.
 
 **Devuelve un solo elemento**
 
@@ -496,7 +496,7 @@ function HelloWorld() {
 }
 ```
 
-Un pequeño ejemplo: intente eliminar el `<div>` que engloba y observa el resultado. Deberías obtener este error:
+Un pequeño ejemplo: intenta eliminar el `<div>` que los engloba y observa el resultado. Deberías obtener este error:
 
 `Syntax error: C:/react-ejemplos/hello-world/src/index.js: Adjacent JSX elements must be wrapped in an enclosing tag (14:18)`
 
@@ -522,7 +522,13 @@ return [<Hello/>, <World/>];
 return [React.createElement(Hello, null), React.createElement(World, null)];
 ```
 
-Sí, pero a partir de la versión [React v16.0](https://reactjs.org/blog/2017/09/26/react-v16.0.html). En este curso evitaré usar esto.
+Renderiza correctamente pero podrás ver una advertencia en el depurador:
+
+`Each child in an array or iterator should have a unique “key” prop.`
+
+React necesita una clave única por cada elemento JSX de una matriz. Más adelante, aprenderemos más sobre la "prop key", mientras tanto, hay dos formas de resolver este problema: o bien envolver los elementos en una sola etiqueta o envolverlos en un fragmento.
+
+FALTA PAGINA 30/31/32, me quedo aquí...
 
 **JavaScript dentro de JSX**
 
@@ -1104,11 +1110,11 @@ Puedes cambiar al contenido: el nombre, el identificador, el mensaje y incluso e
 
 ![tweet 5](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/tweet_indesing_05.png)
 
+[Ejercicio Resuelto](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/scr/c5/)
+
 Ahora vamos a parametrizar componentes.
 
 [![Componente de ejemplo Tweet](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/round_arrow_back_ios_black_24dp.png)](#5-componente-de-ejemplo-tweet)
-
-[Ejercicio Resuelto](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/scr/c5/)
 
 # 6. Props
 
