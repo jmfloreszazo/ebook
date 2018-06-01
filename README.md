@@ -26,7 +26,7 @@ Uno de los proyectos en los que he trabajado a recibido un premio de la UE: [Lau
 
 **Libros**
 
-[![React Full-Stack](/img/react-full-stack.png)](/react-full-stack/)
+[![React Full-Stack](/img/react-full-stack.png)](https://github.com/jmfloreszazo/ebook/tree/master/react_full-stack)
 
 **En preparación**
 
