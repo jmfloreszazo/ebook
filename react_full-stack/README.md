@@ -1106,7 +1106,9 @@ Puedes cambiar al contenido: el nombre, el identificador, el mensaje y incluso e
 
 Ahora vamos a parametrizar componentes.
 
-[![Componente de ejmplo Tweet](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/round_arrow_back_ios_black_24dp.png)](#5-componente-de-ejemplo-tweet)
+[![Componente de ejemplo Tweet](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/round_arrow_back_ios_black_24dp.png)](#5-componente-de-ejemplo-tweet)
+
+[Ejercicio Resuelto](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/scr/c5/)
 
 # 6. Props
 
