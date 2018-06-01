@@ -278,7 +278,7 @@ Existen otras 2 formas de crear componentes: clases ES6 y la ya obsoleta `React.
 
 Esta tipo de sintaxis similar a HTML son renderizadas por funciones JSX, a continuación os explico que es JSX.
 
-[Ejercicio Resuelto](/scr/c2/index.js)
+[Ejercicio Resuelto](/https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/scr/c2/index.js)
 
 [![Hello World](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/round_arrow_back_ios_black_24dp.png)](#2-hello-world)
 
@@ -304,7 +304,7 @@ Entonces, ¿qué está haciendo React?, ¿cómo funciona? y  ¿por qué no es ta
 
 Los elementos escritos en JSX se compilan en JavaScript con una herramienta llamada *Babel*. Babel es un *transpiler*, es decir, transforma el código en JavaScript ES6 válido que todos los navegadores puedan comprender. Cada elemento JSX se convierte en una llamada a función, donde sus argumentos son sus atributos ("props") y sus contenidos ("children").
 
-![JSX->Babel->JS](/img/transpiler.png)
+![JSX->Babel->JS](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/transpiler.png)
 
 Una explicación más detallada del funcionamiento:
 
@@ -668,7 +668,7 @@ ReactDOM.render(
 </div>
 ```
 
-[Ejercicio Resuelto](/scr/c4/index_1.js)
+[Ejercicio Resuelto](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/scr/c4/index_1.js)
 
 2. Vamos a ver como interpreta los espacios en blanco y las lineas JSX.
 
@@ -712,11 +712,11 @@ ReactDOM.render(
 </div>
 ```
 
-[Ejercicio Resuelto](/scr/c4/index_2.js)
+[Ejercicio Resuelto](/https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/scr/c4/index_2.js)
 
 3. Vamos a cambiar el ejemplo 1 para usar `React.createElement`. El resultado de ser identico.
 
-[Ejercicio Resuelto](/scr/c4/index_3.js)
+[Ejercicio Resuelto](/https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/scr/c4/index_3.js)
 
 4. Escribe el componente JSX para que cuando el nombre de usuario no esté definido o sea nulo, muestre "Sesión no inicializara". Cuando el nombre de usuario es una cadena, renderiza "Hola, nombre de usuario".
 
@@ -729,7 +729,7 @@ function Welcomen() {
 }
 ```
 
-[Ejercicio Resuelto](/scr/c4/index_4.js)
+[Ejercicio Resuelto](/https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/scr/c4/index_4.js)
 
 5. Una buena forma de aprender una nueva sintaxis es intentar romperla: descubrir sus límites. Prueba algunas de las cosas sobre las que te he advertido y revia el error. Servirá para que te familiarices con este tipo de error y si te lo encuentras en el futuro, ya sabrás más o menos a que se debe.
 
@@ -740,7 +740,7 @@ function Welcomen() {
 - e. ¿Qué pasa con una función llamada como `alert('Hola')`? ¿Intenta renderizarlo?
 - f. Intenta poner una cadena entrecomillada dentro de JSX. ¿Qué pasa?
 
-[Ejercicio Resuelto](/scr/c4/index_5.js)
+[Ejercicio Resuelto](/https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/scr/c4/index_5.js)
 
 [![Trabajando con JSX](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/round_arrow_back_ios_black_24dp.png)](#4-trabajando-con-jsx)
 
@@ -756,7 +756,7 @@ Un boceto, tambien nos marca cuando "terminar". Sin un boceto, siempre será ins
 
 Imaginaros que un diseñador me pasa este boce tan bien trabajado de un Tweet:
 
-![tweet](/img/tweet.png)
+![tweet](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/tweet.png)
 
 ## Paso 2: Definir los componentes
 
@@ -770,13 +770,13 @@ Otra estrategia es hacer que cada elemento sea un componente: botones, textos, i
 
 Como ejercicio separa en componentes el boceto y luego lo comparas con el que propongo:
 
-![tweet componentes](/img/tweet_componentes.png)
+![tweet componentes](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/tweet_componentes.png)
 
 ## Paso 3: Dar un nombre a los componentes
 
 Hemos separado el boceto en partes:
 
-![tweet jerquia y nombres](/img/tweet_componentes_jerarquia.png)
+![tweet jerquia y nombres](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/tweet_componentes_jerarquia.png)
 
 Los componentes estarán estructurado en jerquías con padres e hijos.
 
@@ -810,7 +810,7 @@ La otra ventaja del desarrollo ascendente en una reescritura es que encaja muy b
 
 Con nuestro boceto:
 
-![tweet jerquia y nombres](/img/tweet_componentes_jerarquia.png)
+![tweet jerquia y nombres](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/tweet_componentes_jerarquia.png)
 
 Construiremos un tweet estático, comenzando con el componente de nivel superior: `Tweet`.
 
@@ -864,7 +864,7 @@ Lanza el servidor y prueba que funcione:
 
 Y el resultado renderizado es:
 
-![tweet 1](/img/tweet_indesing_01.png)
+![tweet 1](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/tweet_indesing_01.png)
 
 No existe nada distinto a lo que ya hemos visto. Es un componete al que le hemos añadido un atributo `className` (o `prop`).
 
@@ -920,7 +920,7 @@ Y añadimos el estilo en `index.css`:
 
 Y el resultado renderizado es:
 
-![tweet 2](/img/tweet_indesing_02.png)
+![tweet 2](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/tweet_indesing_02.png)
 
 Los siguientes componentes serán `NameWithHandle` y `Message`:
 
@@ -973,7 +973,7 @@ Aun nos falta el CSS:
 
 Nuestro tweet se va pareciendo al diseño del boceto:
 
-![tweet 3](/img/tweet_indesing_03.png)
+![tweet 3](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/tweet_indesing_03.png)
 
 Ahora añadimos `Time` y `buttons`:
 
@@ -1098,11 +1098,11 @@ padding-right: 0.3em;
 
 Y así queda renderizado el boceto:
 
-![tweet 4](/img/tweet_indesing_04.png)
+![tweet 4](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/tweet_indesing_04.png)
 
 Puedes cambiar al contenido: el nombre, el identificador, el mensaje y incluso el Gravatar. Por ejemplo quedaría algo muy similar:
 
-![tweet 5](/img/tweet_indesing_05.png)
+![tweet 5](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/tweet_indesing_05.png)
 
 Ahora vamos a parametrizar componentes.
 
