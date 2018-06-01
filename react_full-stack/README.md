@@ -10,8 +10,8 @@ Secciones del libro:
 <!-- TOC -->
 
 - [1. Introduccion](#1-introduccion)
-    - [1.1 ¿Por que React y nada más?](#11-¿por-que-react-y-nada-más)
-    - [1.2 ¿Como he estructurado este libro?](#12-¿como-he-estructurado-este-libro)
+    - [1.1 React y nada más](#11-react-y-nada-más)
+    - [1.2 La estructura del libro](#12-la-estructura-del-libro)
     - [1.3 Configuración del entorno](#13-configuración-del-entorno)
     - [1.3 Depuración: curso acelerado](#13-depuración-curso-acelerado)
 - [2. Hello World](#2-hello-world)
@@ -65,13 +65,13 @@ Veremos cómo usar los controles de formulario y el ciclo de vida del componente
 
 [![Inicio Seccion](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/round_arrow_back_ios_black_24dp.png)](#1-introduccion)
 
-## 1.1 ¿Por que React y nada más?
+## 1.1 React y nada más
 
 Es necesario ir paso a paso a paso. Sin una comprensión sólida de React, el aprendizaje simultáneo de bibliotecas como Redux y herramientas como Webpack, solo sirve para ralentizará el proceso de aprendizaje.
 
 Vamos a considerar a React como el núcleo sobre el que iremos poniendo capas (biblioteca) como Redux o Webpack.
 
-## 1.2 ¿Como he estructurado este libro?
+## 1.2 La estructura del libro
 
 **¿Cuánto tiempo me llevará aprender React?**
 
