@@ -1329,12 +1329,6 @@ function Avatar({ hash }) {
 }
 ````
 
-The Gravatar hash, passed in as hash using ES6 destructuring, is incorporated into the URL and passed to the image tag as before.
-
-Here’s a little more ES6 for you: the backticks around the URL string are a new syntax for template strings. The ${hash} part will be replaced with the hash itself. This new syntax is a bit cleaner than doing string concatenation, as in "https://www.gravatar.com/avatar/" + hash.
-
-The avatar should render the same as before.
-
-You can replace the Gravatar hash with your own if you like. Visit https://daveceddia.com/gravatar, type in your email, and copy the hash. (If you don’t have a Gravatar account, you can create one at https://gravatar.com).
+--- POR AQUI ME QUEDO...
 
 
