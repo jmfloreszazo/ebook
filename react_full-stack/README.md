@@ -278,7 +278,7 @@ Existen otras 2 formas de crear componentes: clases ES6 y la ya obsoleta `React.
 
 Esta tipo de sintaxis similar a HTML son renderizadas por funciones JSX, a continuación os explico que es JSX.
 
-[Ejercicio Resuelto](/https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/scr/c2/index.js)
+[Ejercicio Resuelto](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/scr/c2/index.js)
 
 [![Hello World](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/round_arrow_back_ios_black_24dp.png)](#2-hello-world)
 
@@ -712,11 +712,11 @@ ReactDOM.render(
 </div>
 ```
 
-[Ejercicio Resuelto](/https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/scr/c4/index_2.js)
+[Ejercicio Resuelto](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/scr/c4/index_2.js)
 
 3. Vamos a cambiar el ejemplo 1 para usar `React.createElement`. El resultado de ser identico.
 
-[Ejercicio Resuelto](/https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/scr/c4/index_3.js)
+[Ejercicio Resuelto](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/scr/c4/index_3.js)
 
 4. Escribe el componente JSX para que cuando el nombre de usuario no esté definido o sea nulo, muestre "Sesión no inicializara". Cuando el nombre de usuario es una cadena, renderiza "Hola, nombre de usuario".
 
@@ -729,7 +729,7 @@ function Welcomen() {
 }
 ```
 
-[Ejercicio Resuelto](/https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/scr/c4/index_4.js)
+[Ejercicio Resuelto](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/scr/c4/index_4.js)
 
 5. Una buena forma de aprender una nueva sintaxis es intentar romperla: descubrir sus límites. Prueba algunas de las cosas sobre las que te he advertido y revia el error. Servirá para que te familiarices con este tipo de error y si te lo encuentras en el futuro, ya sabrás más o menos a que se debe.
 
@@ -740,7 +740,7 @@ function Welcomen() {
 - e. ¿Qué pasa con una función llamada como `alert('Hola')`? ¿Intenta renderizarlo?
 - f. Intenta poner una cadena entrecomillada dentro de JSX. ¿Qué pasa?
 
-[Ejercicio Resuelto](/https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/scr/c4/index_5.js)
+[Ejercicio Resuelto](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/scr/c4/index_5.js)
 
 [![Trabajando con JSX](https://github.com/jmfloreszazo/ebook/blob/master/react_full-stack/img/round_arrow_back_ios_black_24dp.png)](#4-trabajando-con-jsx)
 
