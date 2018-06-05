@@ -528,7 +528,98 @@ Renderiza correctamente pero podrás ver una advertencia en el depurador:
 
 React necesita una clave única por cada elemento JSX de una matriz. Más adelante, aprenderemos más sobre la "prop key", mientras tanto, hay dos formas de resolver este problema: o bien envolver los elementos en una sola etiqueta o envolverlos en un fragmento.
 
-FALTA PAGINA 30/31/32, me quedo aquí...
+**Englobar con etiquetas**
+
+La manera más obvia de devolver varios elementos es envolverlos en una etiqueta `<div>` o `<span>`. Pero tiene un efecto secundario: influye en la estructura DOM.
+
+Este componente React:
+
+````javascript
+function HelloWorld() {
+  return (
+    <div>
+      <Hello/> <World/>!
+    </div>
+  );
+}
+````
+
+El DOM lo renderiza  forma:
+
+````html
+<div>
+  <span>Hello</span>
+  <span>World</span>
+  "!"
+</div>
+````
+
+En muchas ocasiones esto es correcto. Pero en otras no desaras tener un contenedor, si creas un componente que debe devolver celdas de una tabla, como este:
+
+````javascript
+function NameCells() {
+  return (
+    <td>Title A/td>
+    <td>Title B</td>
+  );
+}
+````
+
+No podrás envolver estos elementos en un `<div>`, porque las celdas de la tabla `<td>` deben estar eglobadas en una fila de `<tr>`. Podría englobar en un `<tr>`, pero y ¿si tienes múltiples componentes qué cada uno devuelve su propio conjunto de celdas?, ¿cCómo puedo combinarlos?
+
+**Fragmentos**
+
+La respuesta es el fragmento (*fragment*). Este componente fue agregado en React 16.2 y se usa de la siguiente forma:
+
+````javascript
+function NameCells() {
+  return (
+    <React.Fragment>
+      <td>Title A</td>
+      <td>Title B</td>
+    </React.Fragment>
+  );
+}
+````
+
+Ana vez renderizado, el componente `React.Fragment` "desaparecerá", dejando solo a los hijos que contiene; la estructura DOM no tendrá etiquetas que lo englobe.
+
+Los fragmentos facilitan la producción de HTML válido (como mantener elementos `<td>` directamente dentro de `<tr>`) y mantienen la estructura DOM más limpia, lo que hace que sea más fácil escribir HTML semántico (que también suele ser un HTML más accesible).
+
+Si decides usar `React.Fragment` puedes acortarlo mediante la importación:
+
+````javascript
+import React, { Fragment } from 'react';
+````
+
+Y la nueva sintaxis que está por venir: "etiqueta vacía". Es decir:
+
+````javascript
+function NameCells() {
+  return (
+    <>
+      <td>Title A</td>
+      <td>Title B</td>
+    </>
+  );
+}
+````
+
+De momento `Create React App` no admite esta sintaxis porque la versión de Babel no la admite. `Create React App v2` usará Babel 7, que admite la sintaxis `<>...</>`, mientras tanto, usa `React.Fragment`. Cuando salga la nueva version, trendrás oportunidad de refactorizar este componente.
+
+**Fragmentos, en versiones anteriores
+
+¿Qué sucede si estás en una versión anterior de React?
+
+Si aún no está utilizando React 16.2, puede crear un componente de fragmento de esta manera:
+
+````javascript
+function Frag(props) {
+  return props.children;
+}
+````
+
+No hemos trabajado con `props` o `childrens`, pero lo que hace este componente es devolver los elementos sin envoltorio. Puedes dearle el nombre que desees (no tiene que llamarse Frag) y envolver de forma invisible los componentes.
 
 **JavaScript dentro de JSX**
 
