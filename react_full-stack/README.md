@@ -607,19 +607,15 @@ function NameCells() {
 
 De momento `Create React App` no admite esta sintaxis porque la versión de Babel no la admite. `Create React App v2` usará Babel 7, que admite la sintaxis `<>...</>`, mientras tanto, usa `React.Fragment`. Cuando salga la nueva version, trendrás oportunidad de refactorizar este componente.
 
-**Fragmentos, en versiones anteriores
-
-¿Qué sucede si estás en una versión anterior de React?
-
-Si aún no está utilizando React 16.2, puede crear un componente de fragmento de esta manera:
+¿Qué ocurre si estoy en una versión anterior de React? Si aún no está utilizando React 16.2, puedes crear un componente de fragmento de esta manera:
 
 ````javascript
-function Frag(props) {
+function MyFragment(props) {
   return props.children;
 }
 ````
 
-No hemos trabajado con `props` o `childrens`, pero lo que hace este componente es devolver los elementos sin envoltorio. Puedes dearle el nombre que desees (no tiene que llamarse Frag) y envolver de forma invisible los componentes.
+No hemos trabajado con `props` o `childrens`, pero lo que hace este componente es devolver los elementos sin envoltorio. Puedes dearle el nombre que desees (no tiene que llamarse `MyFragment`) y envolver de forma invisible los componentes.
 
 **JavaScript dentro de JSX**
 
