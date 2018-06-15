@@ -1,6 +1,8 @@
-SOLID "Guia Rapida"
+![React Full-Stack](/img/react-full-stack.png)
 
-Guía rápida para aprender qué son y cómo aplicarlos.
+[![Principios SOLID](/img/solid.png)]
+
+Guía rápida para aprender qué son y cómo aplicar los principios SOLID.
 
 **Índice**
 
@@ -30,18 +32,18 @@ Detectar situaciones en las que una clase podría dividirse en varias, pero sin 
 ## 1.3 Conclusión
 # 2. Principio Open/Closed
 ## 2.1 ¿Cómo detectar que estamos violando el principio Open/Closed?
-## 2.2 Ejemplo 
+## 2.2 Ejemplo
 ## 2.3 ¿Cuándo debemos cumplir con este principio?
 ## 2.4 Conclusión
 # 3. Principio de Sustitución de Liskov
 ## 3.1 ¿Cómo detectar que estamos violando el principio de sustitución de Liskov?
-## 3.2 Ejemplo 
+## 3.2 Ejemplo
 ## 3.3 ¿Cómo lo solucionamos?
 ## 3.4  Conclusión
 # 4. Principio de segregación de interfaces
 ## 4.1 El problema
 ## 4.2 ¿Cómo detectar que estamos violando el Principio de segregación de interfaces?
-## 4.3 Ejemplo 
+## 4.3 Ejemplo
 ## 4.4 ¿Qué hacer con código antiguo?
 ## 4.5 Conclusión
 # 5. Principio de inversión de dependencias

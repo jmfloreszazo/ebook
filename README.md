@@ -30,7 +30,7 @@ Y en lo personal, mi proximo objetivo es preparar libros y artículos sobre dive
 
 [![React Full-Stack](/img/react-full-stack.png)](https://github.com/jmfloreszazo/ebook/tree/master/react_full-stack)
 
-[![Solid](/img/solid.png)](https://github.com/jmfloreszazo/ebook/tree/master/solid-guia-rapida)
+[![Principios SOLID](/img/solid.png)](https://github.com/jmfloreszazo/ebook/tree/master/solid-guia-rapida)
 
 [![Patrones de Diseño](/img/patronesdd.png)](https://github.com/jmfloreszazo/ebook/tree/master/patrones-diseño)
 
