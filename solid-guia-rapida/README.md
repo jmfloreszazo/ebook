@@ -1,4 +1,4 @@
-[![Principios SOLID](/img/solid.png)]
+![Principios SOLID](/img/solid.png)
 
 Guía rápida para aprender qué son y cómo aplicar los principios SOLID.
 
