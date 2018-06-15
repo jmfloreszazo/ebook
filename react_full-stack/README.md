@@ -3,6 +3,7 @@
 Secciones del libro:
 
   * **I. React.**
+  * **II. CSS Grid para React.**
   
 ---
 
@@ -605,7 +606,7 @@ function NameCells() {
 }
 ````
 
-De momento `Create React App` no admite esta sintaxis porque la versión de Babel no la admite. `Create React App v2` usará Babel 7, que admite la sintaxis `<>...</>`, mientras tanto, usa `React.Fragment`. Cuando salga la nueva version, trendrás oportunidad de refactorizar este componente.
+De momento `create-react-app` no admite esta sintaxis porque la versión de Babel no la admite. La próxima version usará Babel 7, que admite la sintaxis `<>...</>`, mientras tanto, usa `React.Fragment`. Cuando salga la nueva version, trendrás oportunidad de refactorizar este componente.
 
 ¿Qué ocurre si estoy en una versión anterior de React? Si aún no está utilizando React 16.2, puedes crear un componente de fragmento de esta manera:
 
@@ -625,7 +626,7 @@ Debes englobar el código JS entre `{}`
 
 ```javascript
 function SubmitButton () {
-  var buttonLabel = "Submit";
+  let buttonLabel = "Submit";
   return (
     <button> {buttonLabel} </button>
   );
@@ -703,7 +704,7 @@ function ValidIndicator () {
 }
 ```
 
-**Nombres de componentes en mayúsculas**
+**Nombres de componentes en Mayúsculas**
 
 Los componentes deben comenzar con una letra mayúscula. Esto significa que debes usar nombres como `UserList`, `Menu` y `SubmitButton`; y no `userList`, `menu` y `submitButton`.
 
@@ -839,7 +840,9 @@ function Welcomen() {
 
 # 5. Componente de ejemplo: Tweet
 
-Ahora vamos a comenzar a pensar en componentes. Comenzaremos con algo sencillo y bien podría tratarse de un boceto (wireframes or mockups) que nos pasaría un diseñador.
+Ahora vamos a comenzar a pensar en componentes. Comenzaremos con algo sencillo y bien podría tratarse de un boceto (wireframes o mockups) que nos pasaría un diseñador.
+
+El proceso lo sintetizamos en estos pasos:
 
 ## Paso 1: El boceto
 
@@ -914,7 +917,7 @@ Creamos un nuevo proyecto:
 Vamos a añadir `font-awesome` a nuestro `public\index.html` en la sección `<head>`:
 
 ````html
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/ font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/ releases/v5.0.12/css/all.css">
 ````
 
 Y vamos a reemplazar el contenido de `src\index.css`, donde escribiremos lo siguiente:
@@ -1211,9 +1214,25 @@ Las etiquetas de HTML tienen "atributos", los componentes de React tienen "props
 
 Ya hemos visto que los componentes de React se pueden escribir como funciones, era lógico suponer que podríamos pasar argumentos a esas funciones. Por tanto: "props" son los argumentos de los componentes.
 
+Una función estandar sería:
+
+````javascript
+function Person() {
+  return "Jose María";
+}
+````
+
+ó
+
+````javascript
+function Person(name) {
+  return name;
+}
+````
+
 **Enviar Props**
 
-Este ejemplo de JSX está pasando al componente `Person` la `prop` llamada `name` con un valor de cadena `Jose María`:
+Si *traducimos* la función standar js anterio a ,JSX está pasando al componente `Person` la `prop` llamada `name` con un valor de cadena `Jose María`:
 
 ````javascript
 <Person name='Jose María'/>
@@ -1248,7 +1267,7 @@ Recuerda que en JSX, las `{}` deben englobar las expresiones de JavaScript. El c
 
 Es importante entender que el JS dentro de las llaves debe ser una expresión, no una declaración. Por ejemplos, cosas que puedes hacer dentro de las expresiones JSX:
 
-* Matemáticas, concatenación: `{1+1}` o `{'Tu' + 'Nombre'}`
+* Funciones matemáticas, concatenación: `{1+1}` o `{'Tu' + 'Nombre'}`
 * Llamadas a función: `{this.getFullName(person)}`
 * Operador ternario (?):` {name === 'Jose María'? 'soy yo': 'no soy yo'}`
 * Expresiones booleanas: `{isEnabled && 'enabled'}`
@@ -1424,6 +1443,118 @@ function Avatar({ hash }) {
 }
 ````
 
---- POR AQUI ME QUEDO...
+Estamos pasando `hash` de Gravatar como una plantilla de cadena. A continuación entramos un poco más en detalle:
 
+**Plantillas de Cadena (Template String)**
 
+Paramos un isntante para aclarar la que son los Template String. Como podrás observar en la URL tenemos el siguiente *texto* `${hash}`, esta cadena se reemplazará con la variable `hash`. Este tipo de sintaxis es más limpia que utilizar concatenación: `"https://www.gravatar.com/avatar/" + hash`, sobre todo cuando es necesario concatenar varias variables en una sola cadena.
+
+Ejemplo:
+
+````javascript
+// Con Template String:
+person = `${firstName} ${lastName}`;
+// Sin Template String
+person = firstName + " " + lastName;
+````
+
+````javascript
+// Con Template String:
+url = `todo.com/users/${userId}/tasks/${itemId}`;
+// Sin Template String
+url = "todo.com/users/" + userId + "/tasks/" + itemId;
+````
+
+**Mensaje**
+
+Vamos a reemplazar el el método `render` del `Tweet`:
+
+````javascript
+<Message />
+````
+
+Con esta otra línea:
+
+````javascript
+<Message text={tweet.message}/>
+````
+
+Y el componente quedaría:
+
+````javascript
+function Message({text}) {
+  return (
+    <div className="message">
+      {text}
+    </div>
+  );
+}
+````
+
+**NameWithHandle y Time**
+
+Vamos a trabajar sobre dos componentes del `Tweet`, reemplazamos:
+
+````javascript
+<NameWithHandle/><Time/>
+````
+
+Por:
+
+````javascript
+<NameWithHandle author={tweet.author}/>
+<Time time={tweet.timestamp}/>
+````
+
+Así uso este punto para introducir el trabajo con bibliotecas. Vamos a usar `Moment.js` para trabajar con fechas y horas. Lo utilizaremos para calcular `Time` de forma relativa (para visualizar "hace 1 dia"). Para instalar `Moment`:
+
+`yarn add moment`
+
+Y para poder utilizarla debemos importarla en la parte superior de `index.js`:
+
+````javascript
+import moment from 'moment';
+````
+
+Actualizar los componentes:
+
+````javascript
+function NameWithHandle({author})
+{
+  const {name, handle} = author;
+  return (
+    <span className="name-with-handle">
+      <span className="name">{name}</span>
+      <span className="handle">@{handle}</span>
+    </span>
+  );
+}
+const Time = ({ time }) => {
+  const timeString = moment(time).fromNow();
+  return (
+    <span className="time">
+      {timeString}
+    </span>
+  );
+};
+````
+
+En el ejemplo del tweet estático, `Time` está escrito como función de flecha, lo dejo así. Pero debes observar que ahora tiene 2 sentencias por tanto necesita que lo englobemos con `{}` y en consecuencia, necesita que devuelva algo: `return`. Es cierto que podríamos haber puesto esto otro:
+
+````javascript
+const Time = () => (
+  <span className="time">moment(time).fromNow()</span>
+);
+````
+
+Lo dejo a tu elección.
+
+**Stop: Qué debería pasarse exactamente como una `prop`?**
+
+Las `props` pueden aceptar todo tipo de datos: numeros, booleanos, cadenas, objetos e incluso funciones. En princpio pensarás en pasar un objeto y que sea este el que extraiga lo que necesita. Pero te darás cuenta que en muchas ocasiones con solo enviar la parte del objeto que te interesa es la mejor solución.
+
+¿Por qué no debo enviar siempre el objeto? Aquí hay algunas razones:
+
+* Atenta contra la reusabilidad: si Time espera un objeto con una propiedad llamada "timestamp", entonces está bloqueado en esa estructura. ¿Qué sucede si tiene un usuario con una propiedad de marca de tiempo llamada "up- dated_at" y desea representarlo con un componente Time? Bueno, no puedes, sin hackear un objeto temporal que "se parece" a lo que Time espera, o cambiar la implementación de Tiempo (potencialmente rompiendo otros usos de él).
+
+* Es más difícil mantenerlo: el componente Tiempo tendría conocimiento de la estructura interna de un objeto de tweet. Esto puede no parecer un gran problema, hasta que tenga 10 componentes como este, y el desarrollador de back-end decide que "timeStamp" con una "S" mayúscula se ve mejor que "timestamp" y ahora tiene que actualizar todos esos componentes. Es una buena idea mantener el conocimiento de las estructuras de datos contenidas en el menor número posible de lugares para reducir el costo del cambio.

@@ -30,6 +30,10 @@ Y en lo personal, mi proximo objetivo es preparar libros y artículos sobre dive
 
 [![React Full-Stack](/img/react-full-stack.png)](https://github.com/jmfloreszazo/ebook/tree/master/react_full-stack)
 
+[![Solid](/img/solid.png)](https://github.com/jmfloreszazo/ebook/tree/master/solid)
+
+[![Patrones de Diseño](/img/patrones.png)](https://github.com/jmfloreszazo/ebook/tree/master/patrones)
+
 # Nota del autor
 
 * Deliveradamente algunas palabras en algunas posiciones particulares no tienen tilde, como por ejemplo los links, para evitar conflictos en markdown.
