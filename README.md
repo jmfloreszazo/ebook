@@ -32,7 +32,7 @@ Y en lo personal, mi proximo objetivo es preparar libros y artículos sobre dive
 
 [![Solid](/img/solid.png)](https://github.com/jmfloreszazo/ebook/tree/master/solid)
 
-[![Patrones de Diseño](/img/patrones.png)](https://github.com/jmfloreszazo/ebook/tree/master/patrones)
+[![Patrones de Diseño](/img/patronesdd.png)](https://github.com/jmfloreszazo/ebook/tree/master/patrones)
 
 # Nota del autor
 
