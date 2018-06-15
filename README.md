@@ -28,7 +28,7 @@ Y en lo personal, mi proximo objetivo es preparar libros y artículos sobre dive
 
 **Libros**
 
-[![React Full-Stack](/img/react-full-stack.png)](https://github.com/jmfloreszazo/ebook/tree/master/react_full-stack)
+[![React Full-Stack](/img/reactfullstack.png)](https://github.com/jmfloreszazo/ebook/tree/master/react_full-stack)
 
 [![Principios SOLID](/img/solid.png)](https://github.com/jmfloreszazo/ebook/tree/master/solid-guia-rapida)
 
