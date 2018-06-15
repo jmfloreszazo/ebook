@@ -6,6 +6,8 @@ Guía rápida para aprender qué son y cómo aplicar los principios SOLID.
 
 # 1. Principio de Responsabilidad Única
 
+La `S` de **Single responsibility**.
+
 Un objeto debe realizar una única cosa. Si no prestamos atención a esto, acabaremos teniendo clases que tienen varias responsabilidades lógicas.
 
 ## 1.1 Detectar si estamos violando el Principio
