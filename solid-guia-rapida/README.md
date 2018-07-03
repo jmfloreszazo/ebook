@@ -6,11 +6,11 @@ Guía rápida para aprender qué son y cómo aplicar los principios SOLID.
 
 # 1. Principio de Responsabilidad Única
 
-La `S` de **Single responsibility**.
+`S` de **Single Responsibility Principle**, tambien se le conoce como `SRP`.
 
 Un objeto debe realizar una única cosa. Si no prestamos atención a esto, acabaremos teniendo clases que tienen varias responsabilidades lógicas.
 
-## 1.1 Detectar si estamos violando el Principio
+## 1.1. Detectar si estamos violando el Principio
 
 Detectar situaciones en las que una clase podría dividirse en varias, pero sin obsesionarse:
 
@@ -30,7 +30,7 @@ Detectar situaciones en las que una clase podría dividirse en varias, pero sin 
 
 En general no hay reglas de oro para estar 100% seguros. La práctica te irá haciendo ver cuándo es recomendable que cierto código se mueva a otra clase, pero estos indicios te ayudarán a detectar algunos casos donde tengas dudas.
 
-## 1.2 Ejemplo
+## 1.2. Ejemplo
 
 Un ejemplo típico es el de un objeto que necesita ser renderizado de alguna forma, por ejemplo imprimiéndose por pantalla. Podríamos tener una clase como esta:
 
@@ -88,7 +88,7 @@ Si necesitases distintas variaciones para presentar la misma clase de forma dife
 
 Otro ejemplo que nos podemos encontrar a menudo es el de objetos a los que les añadimos el método `Save()`. Una vez más, la capa de lógica y la de persistencia deberían permanecer separadas.
 
-## 1.3 Conclusión
+## 1.3. Conclusión
 
 El Principio de Responsabilidad Única es una **herramienta indispensable para proteger nuestro código frente a cambios**, ya que implica que sólo debería haber un motivo por el que modificar una clase.
 
@@ -97,22 +97,22 @@ En la práctica, muchas veces nos encontraremos con que estos límites tendrán 
 **Tu código te irá dando pistas según el software evolucione**.
 
 # 2. Principio Open/Closed
-## 2.1 ¿Cómo detectar que estamos violando el principio Open/Closed?
-## 2.2 Ejemplo
-## 2.3 ¿Cuándo debemos cumplir con este principio?
-## 2.4 Conclusión
+## 2.1. ¿Cómo detectar que estamos violando el principio Open/Closed?
+## 2.2. Ejemplo
+## 2.3. ¿Cuándo debemos cumplir con este principio?
+## 2.4. Conclusión
 # 3. Principio de Sustitución de Liskov
-## 3.1 ¿Cómo detectar que estamos violando el principio de sustitución de Liskov?
-## 3.2 Ejemplo
-## 3.3 ¿Cómo lo solucionamos?
-## 3.4  Conclusión
+## 3.1. ¿Cómo detectar que estamos violando el principio de sustitución de Liskov?
+## 3.2. Ejemplo
+## 3.3. ¿Cómo lo solucionamos?
+## 3.4. Conclusión
 # 4. Principio de segregación de interfaces
-## 4.1 El problema
-## 4.2 ¿Cómo detectar que estamos violando el Principio de segregación de interfaces?
-## 4.3 Ejemplo
-## 4.4 ¿Qué hacer con código antiguo?
-## 4.5 Conclusión
+## 4.1. El problema
+## 4.2. ¿Cómo detectar que estamos violando el Principio de segregación de interfaces?
+## 4.3. Ejemplo
+## 4.4. ¿Qué hacer con código antiguo?
+## 4.5. Conclusión
 # 5. Principio de inversión de dependencias
-## 5.1 El problema
-## 5.2 ¿Cómo detectar que estamos violando el Principio de inversión de dependencias?
-## 5.3 Ejemplo
+## 5.1. El problema
+## 5.2. ¿Cómo detectar que estamos violando el Principio de inversión de dependencias?
+## 5.3. Ejemplo
