@@ -102,7 +102,7 @@ Bertrand Mayer, hace referencia a este principio en el libro: [Object Oriented S
 
 Nos dice que una entidad de software debería estar abierta a la extensión pero cerrada a la modificación. ¿Qué queremos decir con esto? Que tenemos que se capaces de extender el comportamiento de nuestras clases sin necesidad de modificar su código. Esto nos ayudará a seguir añadiendo funcionalidad con la seguridad de que no afectará al código existente. Nuevas funcionalidades implicará añadir nuevos métodos y clases, pero no debe obligarnos a modificar código ya escrito.
 
-A este princpio llegamos gracias al principio anteior, pero no quiere decir que cumpliendo el primer principio, el segundo se de forma automática o viceversa.
+A este princpio llegamos gracias al principio anterior; pero no quiere decir que cumpliendo el primer principio, el segundo se de forma automática o viceversa.
 
 El principio Open/Closed se suele resolver utilizando polimorfismo. En vez de obligar a la clase principal a saber cómo realizar una operación, delega esta a los objetos que utiliza, de tal forma que no necesita saber explícitamente cómo llevarla a cabo. Estos objetos tendrán una interfaz común que implementarán de forma específica según sus requerimientos.
 
