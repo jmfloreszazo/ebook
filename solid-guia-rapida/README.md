@@ -97,8 +97,25 @@ En la práctica, muchas veces nos encontraremos con que estos límites tendrán 
 **Tu código te irá dando pistas según el software evolucione**.
 
 # 2. Principio Open/Closed
+
+Bertrand Mayer, hace referencia a este principio en el libro: [Object Oriented Software Construction](https://en.wikipedia.org/wiki/Object-Oriented_Software_Construction) (1988).
+
+Nos dice que una entidad de software debería estar abierta a la extensión pero cerrada a la modificación. ¿Qué queremos decir con esto? Que tenemos que se capaces de extender el comportamiento de nuestras clases sin necesidad de modificar su código. Esto nos ayudará a seguir añadiendo funcionalidad con la seguridad de que no afectará al código existente. Nuevas funcionalidades implicará añadir nuevos métodos y clases, pero no debe obligarnos a modificar código ya escrito.
+
+A este princpio llegamos gracias al principio anteior, pero no quiere decir que cumpliendo el primer principio, el segundo se de forma automática o viceversa.
+
+El principio Open/Closed se suele resolver utilizando polimorfismo. En vez de obligar a la clase principal a saber cómo realizar una operación, delega esta a los objetos que utiliza, de tal forma que no necesita saber explícitamente cómo llevarla a cabo. Estos objetos tendrán una interfaz común que implementarán de forma específica según sus requerimientos.
+
 ## 2.1. ¿Cómo detectar que estamos violando el principio Open/Closed?
+
+Una de las formas más sencillas para detectarlo es darnos cuenta de qué clases modificamos más a menudo. Si cada vez que hay un nuevo requisito o una modificación de los existentes, las mismas clases se ven afectadas, podemos empezar a entender
+que estamos violando este principio.
+
+Quizá la forma más sencilla para detectarlo es darnos cuenta qué clases modificamos más a menudo. Si cada vez nos que solicitan un nuevo requisito o modificación de lo existentes se ven afectadsa las mismas clases, podemos intuir que estamos violando el principio.
+
 ## 2.2. Ejemplo
+
+
 ## 2.3. ¿Cuándo debemos cumplir con este principio?
 ## 2.4. Conclusión
 # 3. Principio de Sustitución de Liskov
