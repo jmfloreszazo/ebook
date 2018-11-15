@@ -1555,6 +1555,15 @@ Las `props` pueden aceptar todo tipo de datos: numeros, booleanos, cadenas, obje
 
 ¿Por qué no debo enviar siempre el objeto? Aquí hay algunas razones:
 
-* Es un radar que actua contra la reusabilidad: si Time espera un objeto con una propiedad llamada "timestamp", entonces está bloqueado en esa estructura. ¿Qué sucede si tiene un usuario con una propiedad de marca de tiempo llamada "updated_at" y desea representarlo con un componente Time?. No puedes, sin trabajar con un objeto temporal que "se parece" a lo que Time espera, o cambiar la implementación de Time (potencialmente rompiendo otros usos de él).
+* Es un radar que actua **contra la reusabilidad**: si `Time` espera un objeto con una propiedad llamada "timestamp", entonces está bloqueado en esa estructura. ¿Qué sucede si tiene un usuario con una propiedad de marca de tiempo llamada "updated_at" y desea representarlo con un componente `Time`?. No puedes, sin trabajar con un objeto temporal que "se parece" a lo que `Time` espera, o cambiar la implementación de `Time` (potencialmente rompiendo otros usos de él).
 
-* Es más difícil de mantener: el componente Time tendría conocimiento de la estructura interna de un objeto del tweet. Esto puede no parecer un gran problema, hasta que tenga 10 componentes como este, y el desarrollador de back-end decide que "timeStamp" con una "S" mayúscula se ve mejor que "timestamp" y ahora tiene que actualizar todos esos componentes. Es una buena idea mantener el conocimiento de las estructuras de datos contenidas en el menor número posible de lugares para reducir el coste del cambio.
+* Es más **difícil de mantener**: el componente `Time` tendría conocimiento de la estructura interna de un objeto del tweet. Esto puede no parecer un gran problema, hasta que tenga 10 componentes como este, y el desarrollador de back-end decide que "timeStamp" con una "S" mayúscula se ve mejor que "timestamp" y ahora tiene que actualizar todos esos componentes. Es una buena idea mantener el conocimiento de las estructuras de datos contenidas en el menor número posible de lugares para reducir el coste del cambio.
+
+**Guía para la nomenclatura de `prop`**
+
+Los nombres que elijas para las `props` influyen en la forma en que se utilizará, así como en la forma en que los componentes se acoplan.
+
+Si hubiéramos escrito `tweetTime` en vez de `Time`. Alguien retoma tu código o tal vez tú mismo dentro de unas semanas. Quieres reutilizar el componente `tweetTime` en una nueva parte de la aplicación que no tenga nada que ver con los tweets. El resultado saldrá bien, pero el código será incómodo, feo y expresa una intención errónea. Es decir, escribir `<Time tweetTime = {timestamp} />`  dentro de algo que no es realmente un tweet, es un error de nomenclatura.
+
+Pero lo más probable es que el desarrollador vea `tweetTime` y no decida no reutilizar ese componente, ya sea porque asumen que no es adecuado para su propósito o que temen que su implementación subyacente pueda cambiar y romper su código.
+
